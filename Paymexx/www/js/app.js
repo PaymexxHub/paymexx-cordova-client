@@ -6,7 +6,7 @@ app.onLoad = function() {
 	document.addEventListener('deviceready', app.onDeviceReady, false);
 	document.addEventListener("deviceready", app.initEvents, false) ;
 },
-app.MerchantID="",
+app.MerchantID="", // Merchant ID
 app.ApiKey = "", // Your secert key provided by Paymexx. Can be found on the dahsboard
 app.ProductName = "", // The Product name. This should already be created in the Paymexx Dashboard.
 app.Env = "test", // The environment you wish to run a transaction in ( either Test mode or Live mode)
@@ -65,91 +65,3 @@ $(document).ready(function(){
     
 });
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-//app.myEventHandler = function() {
-//    "use strict";
-//    var ua = navigator.userAgent;
-//    var str;
-//
-//    if (window.Cordova && dev.isDeviceReady.c_cordova_ready__) {
-//        str = "It worked! Cordova device ready detected at " + dev.isDeviceReady.c_cordova_ready__ + " milliseconds!";
-//    } else if (window.intel && intel.xdk && dev.isDeviceReady.d_xdk_ready______) {
-//        str = "It worked! Intel XDK device ready detected at " + dev.isDeviceReady.d_xdk_ready______ + " milliseconds!";
-//    } else {
-//        str = "Bad device ready, or none available because we're running in a browser.";
-//    }
-//
-//    alert(str);
-//},
-//function extPageTimed() {
-//    "use strict";
-//    var fName = "extPageTimed():";
-//    console.log(fName, "entry");
-//    try {
-//        var ref = window.open('http://html5test.com', '_blank', 'location=yes');
-//        setTimeout(function () {
-//            ref.close();
-//        }, 3000);
-//        console.log(fName, "try, success");
-//    } catch (e) {
-//        console.log(fName, "catch, failure");
-//    }
-//
-//    console.log(fName, "exit");
-//}
-//
-//
-//function extPageSysBrowser() {
-//    "use strict";
-//    var fName = "extPageSysBrowser():";
-//    console.log(fName, "entry");
-//    try {
-//        if (window.tinyHippos) {
-//            emulatorAlert();
-//            console.log(fName, "emulator alert");
-//        } else {
-//            var ref = window.open('http://html5test.com', '_system', 'location=yes');
-//            console.log(fName, "try, success");
-//        }
-//    } catch (e) {
-//        console.log(fName, "catch, failure");
-//    }
-//
-//    console.log(fName, "exit");
-//}
-//
-//
-//function localImg() {
-//    "use strict";
-//    var fName = "localImg():";
-//    console.log(fName, "entry");
-//    try {
-//        var ref = window.open('images/coffee.jpg', '_blank', 'location=yes');
-//        console.log(fName, "try, success");
-//    } catch (e) {
-//        console.log(fName, "catch, failure");
-//    }
-//
-//    console.log(fName, "exit");
-//}
