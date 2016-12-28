@@ -1,0 +1,138 @@
+body{
+    font-size:16px;
+}
+.gateway-placeholder{
+    padding:4% 3%;
+    width:90%;
+}
+
+/**************Overrides *************/
+.navbar {
+    border-radius: 0px !important;
+    padding:0px !important;
+}
+.container-fluid-clearfix{
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+.masthead{
+    background:#40babd;
+    color:#fff;
+     font-weight:600;
+     padding:0.8% 0.4%;
+}
+.list-group{
+    padding-left:0px !important;
+    padding-right:0px !important;
+}
+.badge {
+    display: inline-block;
+    min-width: 30px;
+    padding: 3px 7px;
+    font-size: 18px !important;
+    font-weight: 400;
+    line-height: 2;
+    color: #777;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    background-color: #e8e8e8;
+    border-radius: 5px;
+}
+/************************************
+ Responsive Screen Settings
+*************************************/
+@media (min-width: 300px) and (max-width: 398px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-450.gif')!important;
+ }
+ .img-respond{
+    width:90%;
+    height:auto;
+}
+}
+@media (min-width: 398px) and (max-width: 450px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-450.gif')!important;
+ }
+ .img-respond{
+    width:90%;
+    height:auto;
+}
+}
+
+@media (min-width: 450px) and (max-width: 500px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-450.gif')!important;
+ }
+ .img-respond{
+    width:80%;
+    height:auto;
+}
+}
+
+@media (min-width: 501px) and (max-width: 630px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-768.gif')!important;
+ }
+ .img-respond{
+    width:80%;
+    height:auto;
+}
+}
+
+
+@media (min-width: 631px) and (max-width: 680px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-768.gif')!important;
+ }
+ .img-respond{
+    width:68%;
+    height:auto;
+}
+}
+
+@media (min-width: 681px) and (max-width: 767px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-768.gif')!important;
+ }
+ .img-respond{
+    width:68%;
+    height:auto;
+}
+}
+
+@media (min-width: 768px) and (max-width: 990px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-990.gif')!important;
+ }
+ .img-respond{
+    width:68%;
+    height:auto;
+}
+}
+
+
+/****** iPad Pro Retina **************/
+@media (min-width: 991px) and (max-width: 1601px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-1960.gif')!important;
+ }
+ .img-respond{
+    width:60%;
+    height:auto;
+}
+}
+
+/****** Lenovo Microsoft Surface Tab ******************/
+@media (min-width: 1602px) and (max-width: 1960px) {
+.splash-bg{
+    background-image: url('../images/dec-wallpaper-1960.gif')!important;
+ }
+ .img-respond{
+    width:60%;
+    height:auto;
+}
+}
+
+

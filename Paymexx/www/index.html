@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Test Store CheckOut</title>
+    <meta http-equiv="Content-type" content="text/html; charset=utf-8">
+    <!-- see http://webdesign.tutsplus.com/tutorials/htmlcss-tutorials/quick-tip-dont-forget-the-viewport-meta-tag -->
+    <!-- <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1"> -->
+    <meta name="viewport" content="width=device-width, minimum-scale=1, initial-scale=1, user-scalable=no">
+    <!-- <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=yes, minimum-scale=1, maximum-scale=2"> -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self' 'unsafe-eval' data: blob: filesystem: ws: gap: cdvfile: https://ssl.gstatic.com *; style-src 'self' data: chrome-extension-resource: 'unsafe-inline'; script-src * 'unsafe-inline' 'unsafe-eval'; img-src * data: chrome-extension-resource:; frame-src 'self' data: chrome-extension-resource:; font-src 'self' data: chrome-extension-resource:; media-src *;connect-src * 'unsafe-inline'; child-src *; "> 
+    <style>
+        /* following two viewport lines are equivalent to meta viewport statement above, and is needed for Windows */
+        /* see http://www.quirksmode.org/blog/archives/2014/05/html5_dev_conf.html and http://dev.w3.org/csswg/css-device-adapt/ */
+        @-ms-viewport { width: 100vw ; min-zoom: 100% ; zoom: 100% ; }          @viewport { width: 100vw ; min-zoom: 100% zoom: 100% ; }
+        @-ms-viewport { user-zoom: fixed ; min-zoom: 100% ; }                   @viewport { user-zoom: fixed ; min-zoom: 100% ; }
+        /*@-ms-viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }   @viewport { user-zoom: zoom ; min-zoom: 100% ; max-zoom: 200% ; }*/
+    </style>
+   <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link href="css/font-awesome/css/font-awesome.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">  
+</head>
+<body  onload="app.onLoad()">
+    <script type="application/javascript" src="js/jquery-2.1.1.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/modernizr.js"></script>
+    <script src="cordova.js"></script>          <!-- "Phantom" cordova.js required for projects that use plugins -->
+    <script src="js/app.js"></script>           <!-- for your event code, see README and file comments for details -->
+    <script src="js/init-app.js"></script>      <!-- for your init code, see README and file comments for details -->
+    <script src="xdk/init-dev.js"></script>     <!-- normalizes device and document ready events, see file for details -->
+    <!--<script src="js/util.js"></script>-->  
+    <div style="width:auto;height:45px;"></div>
+    <div class="container-fluid container-fluid-clearfix">
+        <nav class="navbar navbar-inverse navbar-fixed-top">
+  <div class="container-fluid">
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-2">
+        <span class="sr-only">Toggle navigation</span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="#">Test Store Checkout</a>
+    </div>
+  <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-2">
+      <ul class="nav navbar-nav navbar-right">
+        <li class="dropdown">
+          <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+          <ul class="dropdown-menu" role="menu">
+            <li><a href="#">Action</a></li>
+            <li><a href="#">Another action</a></li>
+          </ul>
+        </li>
+      </ul>
+    </div>
+  </div>
+</nav>
+    </div>
+    <div class="container-fluid  masthead" style="padding:2% 18%;">
+        <table width="100%" class="masthead" style="padding:1.2% 1.5%;">
+            <tr>
+            <td width="50%">Items</td>
+           <td width="50%" style="padding-left:2%;">Price</td>
+        </tr>
+        </table>
+    </div>
+            <div class="col-sm-12 col-md-12 col-sx-12 col-lg-12">
+               <ul class="list-group">
+  <li class="list-group-item">
+    <span class="badge">&#8358; 1,200.50</span>
+    <h5><b>Tommy Hilfiger Jeans</b></h5>
+    <small>Quantity: <b>1</b></small>
+  </li>
+  <li class="list-group-item">
+    <span class="badge">&#8358; 1,500.00</span>
+    <h5><b>Versace Gold Bracelet</b></h5>
+    <small>Quantity: <b>2</b></small>
+  </li>
+  <li class="list-group-item">
+    <span class="badge">&#8358; 1,000.00</span>
+    <h5><b>Shipping</b></h5>
+    <br/>
+    </li>
+  <li class="list-group-item">
+    <span class="badge">&#8358; 3,700.00</span>
+    <h5><b>Total</b></h5>
+   <br/>
+  </li>
+  <li class="list-group-item">
+      <span class="badge"></span>
+    <h5><b>Shipping Address</b></h5>
+    <small>55 Kanike Street, Ikoyi, Lagos</small>
+  </li>
+  <li class="list-group-item">
+      <span class="badge"></span>
+    <h5><b>Billing Information</b></h5>
+    <small>John Sparks
+<br/>
+55 Kanike Street, Ikoyi, Lagos</small>
+  </li>
+  
+</ul> 
+            </div>
+    <div class="row">
+        <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4"></div>
+        <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4">
+ <!-- Append payment form hidden fields ONLY -->
+                        <!--<input type="hidden" name="pmx_product" id="pmx_product" value="" >-->
+                        <input type="hidden" name="pmx_email" id="pmx_email" value="james.abiagam@meevesint.com" >
+                        <input type="hidden" name="pmx_phone" id="pmx_phone" value="08042627282" >
+                        <input type="hidden" name="pmx_firstname" id="pmx_firstname" value="Ike" >
+                        <input type="hidden" name="pmx_lastname" id="pmx_lastname" value="Ogbonna">
+                        <input type="hidden" name="pmx_city" id="pmx_city" value="Lagos" >
+                        <input type="hidden" name="pmx_address" id="pmx_address" value="123 Johnson street" >
+                        <input type="hidden" name="pmx_postcode" id="pmx_postcode" value="23401" >
+                        <input type="hidden" name="pmx_country" id="pmx_country" value="Nigeria" >
+                        <input type="hidden" name="pmx_amount" id="pmx_amount" value="8000.50" >
+                        <input type="hidden" name="pmx_response_url" id="pmx_response_url" value="indexb.html#confirm" >
+                        <input type="hidden" name="pmx_currency" id="pmx_currency" value="NGN" >
+                        <input type="hidden" name="pmx_env" id="pmx_env" value="test" >
+ <button id="id_btnExtPage" class="btn btn-lg btn-block btn-primary" onclick="app.launchPaymexxGateway()" style="width:80%;margin:0 auto;"> Place Order</button>
+        </div>
+        <div class="col-sx-4 col-sm-4 col-md-4 col-lg-4"></div>
+    </div>      
+
+    
+    
+    
+    
+    <!--<h1>In App Browser</h1>
+    <button id="id_btnExtPage" onclick="extPage()">Open in InAppBrowser</button>
+    <button id="id_btnExtPageTimed" onclick=extPageTimed();>Open in InAppBrowser for 3 secs</button>
+    <button id="id_btnExtPageSysBrowser" onclick=extPageSysBrowser();>Open in System Web Browser</button>
+    <button id="id_btnLocalImg" onclick=localImg();>Open Local Image</button>-->
+
+</body>
+</html>
